@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Portal de notícias com destaques de tecnologia, esportes e cultura."
+      content="Portal de notícias com destaques, vídeo e formulário acessível."
     >
     <title>Portal de Notícias</title>
     <link rel="stylesheet" href="style.css">
@@ -19,15 +19,15 @@
         <h1>Portal de Notícias</h1>
         <p class="hero-text">
           Atualizações rápidas sobre tecnologia, esportes, ciência e saúde em
-          um layout simples, elegante e acessível.
+          uma página responsiva, semântica e acessível.
         </p>
 
         <nav aria-label="Navegação principal">
           <ul class="nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Tecnologia</a></li>
-            <li><a href="#">Esportes</a></li>
-            <li><a href="#">Cultura</a></li>
+            <li><a href="#destaques">Destaques</a></li>
+            <li><a href="#video">Vídeo</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#categorias">Categorias</a></li>
           </ul>
         </nav>
       </div>
@@ -35,7 +35,7 @@
 
     <div class="container layout">
       <main id="conteudo">
-        <section aria-labelledby="destaques-titulo" class="news-section">
+        <section id="destaques" aria-labelledby="destaques-titulo" class="news-section">
           <h2 id="destaques-titulo">Destaques</h2>
 
           <article class="news-card">
@@ -66,14 +66,112 @@
             </p>
           </article>
         </section>
+
+        <section id="video" aria-labelledby="video-titulo" class="feature-section">
+          <h2 id="video-titulo">Vídeo em destaque</h2>
+          <p class="section-text">
+            A seção abaixo já está estruturada para acessibilidade com controles,
+            múltiplos formatos, legenda e conteúdo alternativo.
+          </p>
+
+          <figure class="media-card">
+            <video controls preload="metadata">
+              <source src="midia/reportagem.mp4" type="video/mp4">
+              <source src="midia/reportagem.webm" type="video/webm">
+              <track
+                kind="captions"
+                srclang="pt-BR"
+                label="Português"
+                default
+              >
+              Seu navegador não suporta vídeo HTML5. Você pode acessar a
+              reportagem em formato de texto logo acima.
+            </video>
+            <figcaption>
+              Reportagem em vídeo sobre inovação e acessibilidade digital.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="contato" aria-labelledby="contato-titulo" class="feature-section">
+          <h2 id="contato-titulo">Fale com a redação</h2>
+          <p class="section-text">
+            Formulário com navegação por teclado, associação correta entre
+            rótulos e campos e validação nativa do navegador.
+          </p>
+
+          <form class="contact-form" action="#" method="post">
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="nome">Nome completo</label>
+                <input
+                  id="nome"
+                  name="nome"
+                  type="text"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="field-group">
+                <label for="email">E-mail</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <div class="field-group">
+                <label for="telefone">Telefone</label>
+                <input
+                  id="telefone"
+                  name="telefone"
+                  type="tel"
+                  inputmode="tel"
+                  pattern="[0-9]{10,11}"
+                  aria-describedby="telefone-ajuda"
+                >
+                <small id="telefone-ajuda">
+                  Digite apenas números, com DDD. Exemplo: 85999998888.
+                </small>
+              </div>
+
+              <div class="field-group">
+                <label for="assunto">Assunto</label>
+                <input
+                  id="assunto"
+                  name="assunto"
+                  type="text"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar mensagem</button>
+          </form>
+        </section>
       </main>
 
-      <aside class="sidebar" aria-labelledby="categorias-titulo">
+      <aside id="categorias" class="sidebar" aria-labelledby="categorias-titulo">
         <h2 id="categorias-titulo">Categorias</h2>
         <ul>
           <li><a href="#">Tecnologia</a></li>
           <li><a href="#">Ciência</a></li>
           <li><a href="#">Saúde</a></li>
+          <li><a href="#">Educação</a></li>
         </ul>
       </aside>
     </div>

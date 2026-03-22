@@ -1,14 +1,13 @@
 :root {
   --bg: #f6f2ff;
-  --bg-strong: #2a1240;
   --surface: #ffffff;
-  --surface-soft: #f1e8ff;
-  --primary: #5c2d91;
+  --surface-soft: #f4ecff;
+  --primary: #6d35a8;
   --primary-dark: #2f1248;
-  --primary-light: #b998f5;
+  --primary-light: #c6a6f7;
   --text: #241334;
   --text-soft: #5d4b70;
-  --border: #ddcff8;
+  --border: #dccbf7;
   --shadow: 0 18px 40px rgba(47, 18, 72, 0.14);
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -31,9 +30,15 @@ body {
   line-height: 1.6;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(185, 152, 245, 0.45), transparent 30%),
-    radial-gradient(circle at top right, rgba(92, 45, 145, 0.2), transparent 25%),
-    linear-gradient(180deg, #fcfaff 0%, var(--bg) 45%, #efe4ff 100%);
+    radial-gradient(circle at top left, rgba(198, 166, 247, 0.45), transparent 30%),
+    radial-gradient(circle at top right, rgba(109, 53, 168, 0.18), transparent 25%),
+    linear-gradient(180deg, #fdfbff 0%, var(--bg) 45%, #efe5ff 100%);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -48,6 +53,9 @@ a:hover {
 
 a:focus-visible,
 button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
 [tabindex]:focus-visible {
   outline: 3px solid #ffcf5a;
   outline-offset: 3px;
@@ -81,7 +89,7 @@ button:focus-visible,
   color: #ffffff;
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.18), transparent 30%),
-    linear-gradient(135deg, #240f39 0%, #4f267e 55%, #7549af 100%);
+    linear-gradient(135deg, #240f39 0%, #4c227c 55%, #7b55b8 100%);
   box-shadow: 0 16px 40px rgba(42, 18, 64, 0.25);
 }
 
@@ -102,7 +110,7 @@ button:focus-visible,
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #e8d9ff;
+  color: #eadcff;
 }
 
 .site-header h1 {
@@ -112,10 +120,10 @@ button:focus-visible,
 }
 
 .hero-text {
-  width: min(100%, 42rem);
+  width: min(100%, 44rem);
   margin: 1rem 0 0;
   font-size: 1.08rem;
-  color: #f2ebff;
+  color: #f4edff;
 }
 
 .nav-list {
@@ -153,23 +161,29 @@ button:focus-visible,
 }
 
 .news-section,
+.feature-section,
 .sidebar {
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(221, 207, 248, 0.95);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(220, 203, 247, 0.95);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   backdrop-filter: blur(4px);
 }
 
-.news-section {
+.news-section,
+.feature-section {
   padding: 1.6rem;
+}
+
+.feature-section {
+  margin-top: 1.5rem;
 }
 
 .sidebar {
   align-self: start;
   padding: 1.5rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(241, 232, 255, 0.95) 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(244, 236, 255, 0.95) 100%);
 }
 
 h2,
@@ -178,9 +192,14 @@ h3 {
 }
 
 h2 {
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.1rem;
   font-size: 1.85rem;
   color: var(--primary-dark);
+}
+
+.section-text {
+  margin: 0 0 1.2rem;
+  color: var(--text-soft);
 }
 
 .news-card {
@@ -232,7 +251,84 @@ h2 {
   display: inline-block;
   margin-top: 1rem;
   font-weight: 700;
+}
+
+.media-card {
+  margin: 0;
+  padding: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f3ff 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.media-card video {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  background: #1d102b;
+}
+
+.media-card figcaption {
+  margin-top: 0.85rem;
+  color: var(--text-soft);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field-group label {
+  font-weight: 700;
   color: var(--primary-dark);
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  color: var(--text);
+  background: #ffffff;
+  border: 1px solid #cdb8ef;
+  border-radius: 14px;
+}
+
+.field-group input:invalid,
+.field-group textarea:invalid {
+  border-color: #a63f6b;
+}
+
+.field-group small {
+  color: var(--text-soft);
+}
+
+.submit-button {
+  justify-self: start;
+  padding: 0.9rem 1.25rem;
+  font: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border: none;
+  border-radius: 999px;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+  filter: brightness(1.05);
 }
 
 .sidebar h2 {
@@ -280,11 +376,13 @@ h2 {
     padding: 3rem 0 2rem;
   }
 
-  .layout {
+  .layout,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
   .news-section,
+  .feature-section,
   .sidebar {
     padding: 1.2rem;
   }
@@ -293,7 +391,8 @@ h2 {
     gap: 0.55rem;
   }
 
-  .nav-list a {
+  .nav-list a,
+  .submit-button {
     width: 100%;
     text-align: center;
   }
