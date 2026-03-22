@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajudas</title>
+    <style>
+        mark{
+            background-color: rgb(75, 185, 185);
+        }
+    </style>
+</head>
+<body>
+    <h1>Simbolos e ajudas:</h1>
+    <p>Aqui segue alguns simbolos: &lt; &gt; &reg; &copy; &trade; &Delta;</p>
+
+    <h1>Testando imagens</h1>
+    <p>Aqui descarregarei imagens da mesma pasta ou pelo google.</p>
+    <img src="Imagens/file_type_html_icon_130541corrigido.webp" alt="Logo HTML5">
+    <img src="Imagens/CSS3_icon-icons-corrigido.webp" alt="Logo CSS 3">
+    <img src="https://cdn.iconscout.com/icon/free/png-512/free-javascript-logo-icon-download-in-svg-png-gif-file-formats--html-programming-language-coding-logos-icons-1720087.png?f=webp&w=256" alt="Logo Javascript">
+
+    <h1>Principais formatações:</h1>
+
+    <h2>Negrito:</h2>
+    <p>Nesta frase o seguinte trecho <strong>tem mais importância </strong>que os demais.</p>
+    
+    <h2>Italico:</h2>
+    <p>Aqui <em>testaremos um trecho</em> em italico</p>
+    
+    <h2>Texto marcado:</h2>
+    <p>Aqui <mark style="background-color: rgb(107, 179, 40);">marcaremos um trecho</mark> do paragrafo <br>Aqui continuarei falando e <mark>marcando um texto</mark>.</p> <!--Aqui o stylo e so nessa linha enquanto no head fica para toda a pagina.-->
+    
+    <h2>Texto pequeno:</h2>
+    <p>Aqui existe um <small>texto pequeno</small> em um texto normal.</p>
+    
+    <h2>Texto excluido:</h2>
+    <p>Podemos marcar um <del>texto excluido para indicar</del> que ele deve ser lido, mas nao considerado</p>
+    
+    <h2>Texto inserido:</h2>
+    <p>Podemos marcar um <ins>texto como inserido</ins> para dar uma enfase e indicar que ele foi adicionado depois.</p>
+    
+    <h2>Texto sobrescrito:</h2>
+    <p>Para inserir coisas do tipo x<sup>2</sup>+3</p>
+    
+    <h2>Texto subescrito:</h2>
+    <p>Para inserir coisa do tipo H<sub>2</sub>O</p>
+    
+    <h2>Codigos-fontes e pré formatações:</h2>
+    <p>Segue um codigo em python:<br><code>print("Hello world!")</code><br>Pode ser tambem assim:
+    <pre>
+valor = int(input("Digite um valor"))
+    print("O valor digitado foi: {valor}")
+    </pre></p>
+    
+    <h2>Citações:</h2>
+    <p>Como diria o pai do meu amigo <q>o computador é um burro muito rápido!</q></p>
+    
+    <h2>Abreviações:</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>, estou adorando!</p>
+
+    <h1>Listas:</h1>
+
+    <h2>Listas ordenadas:</h2>
+    <ol type="1" start="5"> <!--1 A a I i-->
+        <li>Acordar</li>
+        <li>Tomar café</li>
+        <li>Tomar banho</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para faculdade</li>
+        <li>Voltar para casa</li>
+        <li>Dormir</li>
+        <li>Programar</li>
+    </ol>
+
+    <h2>Listas nao ordenadas:</h2>
+    <ul type="square"> <!--disc circle square-->
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Café</li>
+        <li>Carne</li>
+        <li>Manteiga</li>
+    </ul>
+
+    <h2>Juntando listas:</h2>
+    <ol type="1">
+        <li>Ps2:</li>
+        <ul type="square">
+            <li>Black</li>
+            <li>Simpsons</li>
+            <li>RE4</li>
+        </ul>
+        <li>PC:</li>
+        <ul type="square">
+            <li>Csgo</li>
+            <li>Lol</li>
+            <ul type="circle">
+                <li>TFT</li>
+                <LI>Ranked</LI>
+            </ul>
+            <li>Minecraft</li>
+        </ul>
+        <li>Hj:</li>
+        <ul type="square">
+            <li>R6</li>
+            <li>Cs2</li>
+            <li>Vscode</li>
+        </ul>
+    </ol>
+    
+    <h2>Lista de Definições:</h2>
+    <dl>
+        <dt>HTML:</dt>
+        <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd>
+        <dt>CSS:</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        <dt>Javascript:</dt>
+        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl>
+
+    <h1>Links:</h1>
+    <h2>Link externo:</h2>
+    <p>Você pode acessar meu <a href="https://github.com/IagoRF01?tab=repositories" target="_blank" rel="external">repositório público no Github</a></p>
+
+    <h2>Link interno:</h2>
+    <p>Esta é a primeira página do site. Se você quiser pode acessar a minha <a href="pagina2.html" rel="next">segunda pagina.</a></p>
+    <p>Acesse também a imagen do<a href="Imagens/file_type_html_icon_130541corrigido.webp" target="_blank" rel="imagen"> html</a></p> <!--Nesse caso que ta dentro de outra pasta se eu quiser voltar usa ../ e para ir seleciona a pasta antes-->
+    
+</body>
+</html>
